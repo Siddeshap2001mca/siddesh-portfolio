@@ -18,13 +18,13 @@ function showEducation(){
     document.getElementById("popup-data").innerHTML = `
         <h2>MCA</h2>
 
-        <p><b>College:</b> XYZ College</p>
+        <p><b>College:</b> Surana College Autonomous</p>
 
         <p><b>Course:</b> MCA - AIML</p>
 
-        <p><b>CGPA:</b> 8.5</p>
+        <p><b>CGPA:</b> 8.0</p>
 
-        <p><b>Result:</b> First Class</p>
+        <p><b>Result:</b> Distinction </p>
     `;
 }
 
