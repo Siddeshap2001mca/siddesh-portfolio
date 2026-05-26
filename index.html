@@ -1,1 +1,171 @@
-<h1>My Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddesh Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificate">Certificates</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="section">
+        <img src="/images/profilepic.jpeg" class="profile">
+
+        <h1>Hello, I'm Siddesh</h1>
+
+        <p>Frontend Developer | Python Programmer</p>
+
+        <button onclick="showMessage()">Hire Me</button>
+        <a href="/images/Siddesha_Resume_Frontend.pdf" download>
+        <button>Download Resume</button>
+        </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+
+        <p>
+            MCA graduate specialized in AIML with strong interest
+            in Frontend Development and Python Programming.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <div class="card-container">
+
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">Python</div>
+            <div class="card">MySQL</div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>Created using HTML CSS and JavaScript.</p>
+            </div>
+
+            <div class="card">
+                <h3>Movie Review Sentiment Analysis</h3>
+                <p>Python ML project using dataset analysis.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificate" class="section">
+        <h2>Certificates</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Python Certificate</h3>
+
+                <button onclick="openCertificate('images/cert1.jpg')">
+                    View Certificate
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Frontend Certificate</h3>
+
+                <button onclick="openCertificate('images/cert2.jpg')">
+                    View Certificate
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>MCA</h3>
+
+                <button onclick="showEducation()">
+                    View Details
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+
+    <h2>Contact Me</h2>
+
+    <form onsubmit="submitForm(event)">
+
+        <input type="text"
+        placeholder="Enter Your Name"
+        required>
+
+        <input type="email"
+        placeholder="Enter Your Email"
+        required>
+
+        <textarea
+        placeholder="Enter Message"
+        required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <span onclick="closePopup()" class="close">&times;</span>
+
+            <div id="popup-data"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+nav{
+    background:black;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.section{
+    padding:50px;
+    text-align:center;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:blue;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:15px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+}
+
+.popup-content{
+    background:white;
+    width:80%;
+    margin:50px auto;
+    padding:20px;
+    text-align:center;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.popup img{
+    width:100%;
+    max-height:500px;
+    object-fit:contain;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:10px;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+
+} */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#111827;
+    color:white;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav h2{
+    font-size:28px;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* SECTION */
+
+.section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.section h2{
+    font-size:35px;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+/* HOME */
+
+#home{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#0f172a,#1e3a8a);
+    color:white;
+}
+
+.profile{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+#home h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+#home p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+
+button{
+    padding:12px 28px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
+
+/* CARDS */
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#1e3a8a;
+}
+
+/* ABOUT */
+
+#about p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* SKILLS */
+
+#skills .card{
+    background:#1e293b;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* CONTACT */
+
+#contact{
+    background:#111827;
+    color:white;
+}
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input,
+form textarea{
+
+    margin:10px 0;
+    padding:12px;
+    border:1px solid gray;
+    border-radius:5px;
+    font-size:16px;
+}
+
+form textarea{
+    height:120px;
+}
+
+form button{
+    margin-top:10px;
+}
+
+#contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* POPUP */
+
+.popup{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    z-index:9999;
+}
+
+.popup-content{
+    background:white;
+    width:80%;
+    max-width:700px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+    animation:popup 0.4s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(0.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:35px;
+    cursor:pointer;
+    color:red;
+}
+
+.popup img{
+    width:100%;
+    max-height:500px;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:15px;
+        text-align:center;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+
+    #home h1{
+        font-size:35px;
+    }
+
+    #home p{
+        font-size:18px;
+    }
+
+    .profile{
+        width:170px;
+        height:170px;
+    }
+
+    .section{
+        padding:60px 5%;
+    }
+
+    .card{
+        width:100%;
+    }
+
+}
+.dark{
+    background:#0f172a;
+    color:white;
+}
+
+.dark nav{
+    background:black;
+}
+
+.dark .card{
+    background:#1e293b;
+    color:white;
+}
+
+.dark .section h2{
+    color:white;
+}
+
+.dark #contact{
+    background:black;
+}
